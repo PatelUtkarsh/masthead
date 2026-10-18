@@ -1,0 +1,1807 @@
+# Copyright (C) 2026 Masthead
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Masthead 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/masthead\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-18T14:55:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: masthead\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: masthead.php
+#: includes/Admin.php:27
+#: includes/Admin.php:44
+#: includes/Cron.php:213
+#: includes/ListTable.php:185
+#: build/admin-app.js:9
+#: build/admin-app.js:56
+#: build/admin-bar.js:2
+#: build/editor-plugin.js:5
+msgid "Masthead"
+msgstr ""
+
+#. Description of the plugin
+#: masthead.php
+msgid "Kanban publishing workflows for wp-admin. Every card is a post; every stage maps to a core post status."
+msgstr ""
+
+#. translators: %s: post type label, lowercase.
+#: includes/Activity.php:104
+#, php-format
+msgid "created this %s"
+msgstr ""
+
+#. translators: %s: post type label, lowercase.
+#: includes/Activity.php:104
+#: build/admin-app.js:43
+msgid "post"
+msgstr ""
+
+#. translators: %s: stage name.
+#: includes/Activity.php:106
+#, php-format
+msgid "moved to %s"
+msgstr ""
+
+#. translators: %s: comma-separated first names.
+#: includes/Activity.php:108
+#, php-format
+msgid "mentioned %s in a note"
+msgstr ""
+
+#. translators: %s: comma-separated first names.
+#: includes/Activity.php:108
+msgid "left a note"
+msgstr ""
+
+#. translators: %s: date.
+#: includes/Activity.php:110
+#, php-format
+msgid "scheduled it for %s"
+msgstr ""
+
+#: includes/Activity.php:112
+msgid "cleared the due date"
+msgstr ""
+
+#. translators: %s: date.
+#: includes/Activity.php:114
+#, php-format
+msgid "set the date to %s"
+msgstr ""
+
+#. translators: %s: user display name.
+#: includes/Activity.php:116
+#, php-format
+msgid "assigned it to %s"
+msgstr ""
+
+#. translators: 1: post status, 2: stage name.
+#: includes/Activity.php:118
+#, php-format
+msgid "was moved to %2$s because no stage matches “%1$s”"
+msgstr ""
+
+#: includes/Activity.php:119
+msgid "is now overdue"
+msgstr ""
+
+#: includes/Activity.php:120
+msgid "renamed this post"
+msgstr ""
+
+#: includes/Admin.php:28
+#: build/admin-app.js:1
+msgid "Boards"
+msgstr ""
+
+#: includes/Admin.php:29
+#: build/admin-app.js:9
+msgid "Calendar"
+msgstr ""
+
+#: includes/Admin.php:30
+#: build/admin-app.js:9
+#: build/admin-app.js:25
+#: build/admin-app.js:37
+msgid "Workflows"
+msgstr ""
+
+#: includes/Admin.php:31
+msgid "Setup"
+msgstr ""
+
+#: includes/Admin.php:46
+#: includes/Dashboard.php:26
+#: build/admin-app.js:2
+#: build/admin-app.js:13
+#: build/admin-app.js:25
+#: build/admin-app.js:45
+#: build/admin-app.js:50
+#: build/admin-app.js:56
+#: build/admin-bar.js:2
+#: build/editor-plugin.js:1
+msgid "Loading…"
+msgstr ""
+
+#. translators: %d: unread notifications.
+#: includes/AdminBar.php:34
+#: build/admin-bar.js:2
+#, php-format,js-format
+msgid "%d unread notification"
+msgid_plural "%d unread notifications"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/AdminBar.php:39
+#: build/admin-bar.js:2
+msgid "Notifications"
+msgstr ""
+
+#. translators: %s: role name.
+#: includes/AdminBar.php:53
+#, php-format
+msgid "View as: %s"
+msgstr ""
+
+#. translators: %s: role name.
+#: includes/AdminBar.php:53
+#: includes/AdminBar.php:57
+msgid "Yourself"
+msgstr ""
+
+#: includes/Boards.php:201
+msgid "Untitled board"
+msgstr ""
+
+#: includes/Cron.php:206
+#: build/admin-app.js:50
+msgid "Overdue"
+msgstr ""
+
+#: includes/Cron.php:209
+msgid "Due today"
+msgstr ""
+
+#: includes/Cron.php:216
+msgid "Unread notifications"
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/Cron.php:222
+#, php-format
+msgid "[%s] Your Masthead morning digest"
+msgstr ""
+
+#: includes/Dashboard.php:22
+msgid "Editorial pipeline"
+msgstr ""
+
+#. translators: %s: workflow name.
+#: includes/Install.php:95
+#: includes/Setup.php:49
+msgid "Editorial board"
+msgstr ""
+
+#. translators: %s: workflow name.
+#: includes/Install.php:95
+#, php-format
+msgid "%s board"
+msgstr ""
+
+#: includes/ListTable.php:63
+#: includes/ListTable.php:70
+#: build/admin-app.js:51
+#: build/editor-plugin.js:1
+msgid "Stage"
+msgstr ""
+
+#: includes/ListTable.php:113
+msgid "Filter by stage"
+msgstr ""
+
+#: includes/ListTable.php:115
+msgid "All stages"
+msgstr ""
+
+#. translators: %s: stage name.
+#. translators: %s: stage.
+#: includes/ListTable.php:183
+#: build/admin-app.js:56
+#: build/editor-plugin.js:3
+#, php-format,js-format
+msgid "Move to %s"
+msgstr ""
+
+#: includes/ListTable.php:208
+#: includes/Rest/PostsController.php:231
+#: includes/Rules.php:50
+msgid "You can’t edit this post."
+msgstr ""
+
+#: includes/ListTable.php:263
+msgid "Open on board"
+msgstr ""
+
+#: includes/Meta.php:38
+msgid "Masthead stage ID."
+msgstr ""
+
+#: includes/Model/WpStatus.php:21
+#: includes/Workflows.php:195
+#: includes/Workflows.php:264
+#: includes/Workflows.php:283
+#: includes/Workflows.php:302
+msgid "Draft"
+msgstr ""
+
+#: includes/Model/WpStatus.php:22
+msgid "Pending review"
+msgstr ""
+
+#: includes/Model/WpStatus.php:23
+#: includes/Workflows.php:222
+#: includes/Workflows.php:314
+#: build/admin-app.js:50
+msgid "Scheduled"
+msgstr ""
+
+#: includes/Model/WpStatus.php:24
+#: includes/Workflows.php:197
+#: includes/Workflows.php:223
+#: includes/Workflows.php:256
+#: includes/Workflows.php:276
+#: includes/Workflows.php:295
+#: build/admin-app.js:50
+msgid "Published"
+msgstr ""
+
+#: includes/Notes.php:154
+msgid "Write a note first."
+msgstr ""
+
+#: includes/Notes.php:171
+msgid "Couldn’t save the note."
+msgstr ""
+
+#: includes/Posts.php:26
+#: includes/Rest/BoardsController.php:163
+#: includes/Rest/BoardsController.php:207
+#: includes/Rest/BoardsController.php:228
+#: includes/Rest/WorkflowsController.php:153
+#: includes/WorkflowEditor.php:30
+#: includes/WorkflowEditor.php:72
+#: includes/WorkflowEditor.php:214
+msgid "That workflow does not exist."
+msgstr ""
+
+#: includes/Posts.php:30
+msgid "You can’t create posts of this type."
+msgstr ""
+
+#: includes/Posts.php:35
+#: includes/Rules.php:40
+#: includes/Rules.php:297
+#: includes/WorkflowEditor.php:76
+msgid "That stage does not exist."
+msgstr ""
+
+#. translators: %s: singular post type label, lowercase.
+#: includes/Posts.php:45
+#, php-format
+msgid "Untitled %s"
+msgstr ""
+
+#: includes/Posts.php:67
+#: includes/Posts.php:96
+msgid "Couldn’t create the post."
+msgstr ""
+
+#: includes/Posts.php:108
+#: includes/Rules.php:36
+msgid "This post type has no workflow."
+msgstr ""
+
+#: includes/Posts.php:153
+msgid "You can’t assign this post to that person."
+msgstr ""
+
+#: includes/Rest/BoardsController.php:144
+msgid "All posts"
+msgstr ""
+
+#: includes/Rest/BoardsController.php:186
+#: includes/Rest/BoardsController.php:232
+#: includes/Rest/BoardsController.php:239
+msgid "Board not found."
+msgstr ""
+
+#: includes/Rest/BoardsController.php:242
+#: build/admin-app.js:4
+msgid "At least one board must remain."
+msgstr ""
+
+#: includes/Rest/Controller.php:55
+#: includes/Rest/PostsController.php:223
+msgid "Post not found."
+msgstr ""
+
+#: includes/Rest/Controller.php:61
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#. translators: 1: stage name, 2: first names.
+#: includes/Rest/PostsController.php:206
+#, php-format
+msgid "Moved to %1$s · notified %2$s"
+msgstr ""
+
+#. translators: %s: stage name.
+#: includes/Rest/PostsController.php:208
+#, php-format
+msgid "Moved to %s"
+msgstr ""
+
+#. translators: 1: number of posts, 2: stage name.
+#: includes/Rest/PostsController.php:268
+#, php-format
+msgid "Moved %1$d to %2$s"
+msgstr ""
+
+#. translators: 1: number blocked, 2: first reason.
+#: includes/Rest/PostsController.php:271
+#, php-format
+msgid "%1$d blocked: %2$s"
+msgstr ""
+
+#. translators: %s: stage name.
+#: includes/Rules.php:91
+#, php-format
+msgid "Needs approval: only Editors can move posts out of %s"
+msgstr ""
+
+#. translators: %s: stage name.
+#: includes/Rules.php:110
+#, php-format
+msgid "Can’t skip %s. Move it there first"
+msgstr ""
+
+#. translators: 1: stage name, 2: posts in stage, 3: limit.
+#: includes/Rules.php:135
+#, php-format
+msgid "%1$s is full (%2$d/%3$d). Move something on first"
+msgstr ""
+
+#: includes/Rules.php:152
+msgid "Contributors can’t schedule or publish"
+msgstr ""
+
+#. translators: 1: number of open items, 2: post title.
+#: includes/Rules.php:172
+#, php-format
+msgid "Blocked: %1$d checklist item open on “%2$s”"
+msgid_plural "Blocked: %1$d checklist items open on “%2$s”"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Rules.php:228
+#: build/admin-app.js:11
+#: build/admin-app.js:55
+#: build/editor-plugin.js:2
+msgid "Checklist"
+msgstr ""
+
+#. translators: 1: done items, 2: total items.
+#: includes/Rules.php:232
+#, php-format
+msgid "%1$d of %2$d done"
+msgstr ""
+
+#: includes/Rules.php:237
+msgid "Required stages"
+msgstr ""
+
+#: includes/Rules.php:239
+msgid "No required stage skipped"
+msgstr ""
+
+#: includes/Rules.php:243
+#: build/admin-app.js:26
+msgid "Approval"
+msgstr ""
+
+#: includes/Rules.php:245
+msgid "Approved to move on"
+msgstr ""
+
+#: includes/Rules.php:249
+msgid "Permission"
+msgstr ""
+
+#: includes/Rules.php:251
+msgid "You can publish"
+msgstr ""
+
+#: includes/Rules.php:280
+#: build/admin-app.js:13
+#: build/admin-app.js:50
+msgid "This post changed while you were looking at it"
+msgstr ""
+
+#: includes/Rules.php:419
+msgid "Pick a publish date first"
+msgstr ""
+
+#: includes/Rules.php:469
+#: build/admin-app.js:11
+msgid "(no title)"
+msgstr ""
+
+#: includes/Setup.php:61
+#: includes/Setup.php:65
+#: includes/Workflows.php:280
+#: build/admin-app.js:50
+msgid "Pages"
+msgstr ""
+
+#: includes/Setup.php:64
+msgid "Page"
+msgstr ""
+
+#: includes/Setup.php:68
+msgid "Site pages"
+msgstr ""
+
+#: includes/Setup.php:76
+#: includes/Setup.php:79
+#: includes/Setup.php:84
+#: includes/Workflows.php:299
+#: build/admin-app.js:50
+msgid "Newsletter"
+msgstr ""
+
+#: includes/Setup.php:80
+msgid "Newsletters"
+msgstr ""
+
+#: includes/StageTaxonomy.php:36
+msgid "Masthead stage"
+msgstr ""
+
+#: includes/ViewAs.php:70
+msgid "Not available."
+msgstr ""
+
+#: includes/WorkflowEditor.php:79
+#: includes/WorkflowEditor.php:236
+msgid "A workflow needs at least two stages."
+msgstr ""
+
+#: includes/WorkflowEditor.php:119
+msgid "It’s too late to undo that."
+msgstr ""
+
+#: includes/WorkflowEditor.php:143
+msgid "That post type does not exist."
+msgstr ""
+
+#: includes/WorkflowEditor.php:146
+msgid "That post type already has a workflow."
+msgstr ""
+
+#: includes/WorkflowEditor.php:152
+msgid "Give the content type a name."
+msgstr ""
+
+#: includes/WorkflowEditor.php:217
+msgid "You need at least one workflow."
+msgstr ""
+
+#: includes/WorkflowEditor.php:226
+msgid "Move or delete its posts first. A workflow with posts can’t be deleted."
+msgstr ""
+
+#: includes/WorkflowEditor.php:247
+msgid "The last stage usually publishes the post. This workflow ends on a stage that doesn’t."
+msgstr ""
+
+#. translators: %s: singular post type label.
+#: includes/Workflows.php:127
+#, php-format
+msgid "Add new %s"
+msgstr ""
+
+#. translators: %s: singular post type label.
+#: includes/Workflows.php:129
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: includes/Workflows.php:191
+#: includes/Workflows.php:260
+#: build/admin-app.js:36
+msgid "Simple"
+msgstr ""
+
+#: includes/Workflows.php:192
+msgid "For a solo writer or a small blog. No approval step."
+msgstr ""
+
+#: includes/Workflows.php:193
+#: includes/Workflows.php:204
+#: includes/Workflows.php:229
+msgid "Featured image set"
+msgstr ""
+
+#: includes/Workflows.php:193
+#: includes/Workflows.php:204
+#: includes/Workflows.php:262
+#: includes/Workflows.php:281
+#: includes/Workflows.php:300
+msgid "Links checked"
+msgstr ""
+
+#: includes/Workflows.php:193
+#: includes/Workflows.php:204
+#: includes/Workflows.php:229
+#: includes/Workflows.php:262
+#: includes/Workflows.php:281
+msgid "Copy edited"
+msgstr ""
+
+#: includes/Workflows.php:196
+#: includes/Workflows.php:221
+msgid "Ready"
+msgstr ""
+
+#: includes/Workflows.php:201
+msgid "Editorial team"
+msgstr ""
+
+#: includes/Workflows.php:202
+msgid "Writers pitch and draft, editors review and schedule."
+msgstr ""
+
+#: includes/Workflows.php:204
+msgid "Outline approved"
+msgstr ""
+
+#: includes/Workflows.php:204
+msgid "SEO title & meta"
+msgstr ""
+
+#: includes/Workflows.php:206
+msgid "Ideas"
+msgstr ""
+
+#: includes/Workflows.php:207
+#: includes/Workflows.php:233
+msgid "Drafting"
+msgstr ""
+
+#: includes/Workflows.php:210
+#: includes/Workflows.php:267
+msgid "In review"
+msgstr ""
+
+#: includes/Workflows.php:227
+msgid "Newsroom"
+msgstr ""
+
+#: includes/Workflows.php:228
+msgid "Pitches, assignments, a copy desk and legal review."
+msgstr ""
+
+#: includes/Workflows.php:229
+msgid "Sources verified"
+msgstr ""
+
+#: includes/Workflows.php:229
+msgid "Headline approved"
+msgstr ""
+
+#: includes/Workflows.php:231
+msgid "Pitch"
+msgstr ""
+
+#: includes/Workflows.php:232
+msgid "Assigned"
+msgstr ""
+
+#: includes/Workflows.php:236
+#: includes/Workflows.php:305
+msgid "Edit"
+msgstr ""
+
+#: includes/Workflows.php:247
+msgid "Legal"
+msgstr ""
+
+#: includes/Workflows.php:261
+msgid "Draft → In review → Published"
+msgstr ""
+
+#: includes/Workflows.php:281
+msgid "Legal sign-off"
+msgstr ""
+
+#: includes/Workflows.php:286
+msgid "Legal review"
+msgstr ""
+
+#: includes/Workflows.php:300
+msgid "Subject line written"
+msgstr ""
+
+#: includes/Workflows.php:300
+msgid "Preview text set"
+msgstr ""
+
+#: includes/Workflows.php:300
+msgid "Test send"
+msgstr ""
+
+#: includes/Workflows.php:315
+msgid "Sent"
+msgstr ""
+
+#: includes/Workflows.php:356
+#: build/admin-app.js:37
+msgid "Articles"
+msgstr ""
+
+#: includes/Workflows.php:359
+#: build/admin-app.js:50
+msgid "Post"
+msgstr ""
+
+#: includes/Workflows.php:360
+msgid "Posts"
+msgstr ""
+
+#: build/admin-app.js:1
+#: build/admin-app.js:50
+msgid "Close"
+msgstr ""
+
+#. translators: %s: workflow name.
+#: build/admin-app.js:1
+#: build/admin-app.js:9
+#, js-format
+msgid "%s workflow"
+msgstr ""
+
+#: build/admin-app.js:1
+msgid "DEFAULT"
+msgstr ""
+
+#. translators: %s: board name.
+#: build/admin-app.js:2
+#, js-format
+msgid "Settings for %s"
+msgstr ""
+
+#: build/admin-app.js:2
+#: build/admin-app.js:43
+msgid "New board"
+msgstr ""
+
+#: build/admin-app.js:2
+msgid "Search…"
+msgstr ""
+
+#: build/admin-app.js:2
+#: build/admin-app.js:54
+msgid "Clear"
+msgstr ""
+
+#: build/admin-app.js:2
+msgid "No matches"
+msgstr ""
+
+#: build/admin-app.js:2
+msgid "Load more"
+msgstr ""
+
+#: build/admin-app.js:2
+msgid "Search people…"
+msgstr ""
+
+#: build/admin-app.js:2
+msgid "Search categories…"
+msgstr ""
+
+#: build/admin-app.js:2
+#: build/admin-app.js:9
+msgid "Board settings"
+msgstr ""
+
+#. translators: %s: board name.
+#. translators: %s: stage.
+#: build/admin-app.js:4
+#: build/admin-app.js:42
+#, js-format
+msgid "Deleted %s"
+msgstr ""
+
+#: build/admin-app.js:4
+msgid "Delete board"
+msgstr ""
+
+#: build/admin-app.js:4
+#: build/admin-app.js:33
+#: build/admin-app.js:35
+msgid "Cancel"
+msgstr ""
+
+#: build/admin-app.js:4
+msgid "Board saved"
+msgstr ""
+
+#. translators: %s: board name.
+#: build/admin-app.js:6
+#, js-format
+msgid "Created %s"
+msgstr ""
+
+#: build/admin-app.js:6
+#: build/admin-app.js:44
+msgid "Save changes"
+msgstr ""
+
+#: build/admin-app.js:6
+#: build/admin-app.js:50
+msgid "Create board"
+msgstr ""
+
+#: build/admin-app.js:6
+msgid "Name"
+msgstr ""
+
+#: build/admin-app.js:6
+msgid "e.g. Culture desk"
+msgstr ""
+
+#: build/admin-app.js:6
+msgid "Content"
+msgstr ""
+
+#: build/admin-app.js:6
+msgid "Content type"
+msgstr ""
+
+#. translators: %s: workflow name.
+#: build/admin-app.js:6
+#, js-format
+msgid "Uses the %s workflow"
+msgstr ""
+
+#: build/admin-app.js:6
+msgid "Only show"
+msgstr ""
+
+#: build/admin-app.js:6
+msgid "Category"
+msgstr ""
+
+#: build/admin-app.js:6
+msgid "Any category"
+msgstr ""
+
+#: build/admin-app.js:6
+#: build/admin-app.js:7
+#: build/admin-app.js:25
+#: build/admin-app.js:51
+#: build/editor-plugin.js:1
+msgid "Assignee"
+msgstr ""
+
+#: build/admin-app.js:6
+#: build/admin-app.js:7
+msgid "Anyone"
+msgstr ""
+
+#. translators: %d: number of posts.
+#: build/admin-app.js:7
+#, js-format
+msgid "%d post matches right now"
+msgid_plural "%d posts match right now"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin-app.js:7
+msgid "Default board"
+msgstr ""
+
+#: build/admin-app.js:7
+msgid "Opens first from the Masthead menu."
+msgstr ""
+
+#: build/admin-app.js:7
+msgid "Filter by assignee"
+msgstr ""
+
+#: build/admin-app.js:7
+msgid "Filter by someone else"
+msgstr ""
+
+#: build/admin-app.js:7
+#: build/admin-app.js:43
+msgid "All workflows"
+msgstr ""
+
+#: build/admin-app.js:9
+msgid "Board"
+msgstr ""
+
+#: build/admin-app.js:9
+msgid "Views"
+msgstr ""
+
+#: build/admin-app.js:9
+msgid "Search posts"
+msgstr ""
+
+#: build/admin-app.js:9
+msgid "New post"
+msgstr ""
+
+#. translators: %s: date.
+#: build/admin-app.js:10
+#, js-format
+msgid "Overdue · %s"
+msgstr ""
+
+#: build/admin-app.js:10
+msgid "No date"
+msgstr ""
+
+#: build/admin-app.js:10
+msgid "PAGE"
+msgstr ""
+
+#. translators: %s: user name.
+#: build/admin-app.js:11
+#, js-format
+msgid "%s is editing"
+msgstr ""
+
+#: build/admin-app.js:11
+msgid "You can’t move this post"
+msgstr ""
+
+#: build/admin-app.js:11
+msgid "Read only"
+msgstr ""
+
+#: build/admin-app.js:11
+#: build/admin-app.js:55
+#: build/editor-plugin.js:2
+msgid "Notes"
+msgstr ""
+
+#: build/admin-app.js:11
+msgid "post card"
+msgstr ""
+
+#. translators: 1: posts, 2: limit.
+#: build/admin-app.js:12
+#, js-format
+msgid "%1$d of %2$d allowed"
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/admin-app.js:13
+#, js-format
+msgid "Add post to %s"
+msgstr ""
+
+#: build/admin-app.js:13
+msgid "Add post"
+msgstr ""
+
+#: build/admin-app.js:13
+msgid "Drop a post here"
+msgstr ""
+
+#: build/admin-app.js:13
+#: build/admin-app.js:25
+msgid "Show more"
+msgstr ""
+
+#: build/admin-app.js:13
+#: build/admin-app.js:18
+#: build/admin-app.js:50
+msgid "Retry"
+msgstr ""
+
+#: build/admin-app.js:13
+#: build/admin-app.js:50
+msgid "Couldn’t save the move. Your board hasn’t changed"
+msgstr ""
+
+#: build/admin-app.js:13
+msgid "This board no longer exists."
+msgstr ""
+
+#. translators: %s: post title.
+#. translators: %s: stage.
+#: build/admin-app.js:14
+#: build/admin-app.js:24
+#: build/admin-app.js:38
+#, js-format
+msgid "Picked up %s"
+msgstr ""
+
+#. translators: 1: post title, 2: stage name.
+#: build/admin-app.js:15
+#, js-format
+msgid "%1$s is over %2$s"
+msgstr ""
+
+#. translators: 1: post title, 2: stage name.
+#: build/admin-app.js:16
+#, js-format
+msgid "Moved %1$s to %2$s"
+msgstr ""
+
+#. translators: %s: post title.
+#: build/admin-app.js:17
+#, js-format
+msgid "Dropped %s"
+msgstr ""
+
+#. translators: %s: post title.
+#: build/admin-app.js:18
+#, js-format
+msgid "Cancelled moving %s"
+msgstr ""
+
+#. translators: %s: search term.
+#: build/admin-app.js:18
+#, js-format
+msgid "No posts on this board match “%s”"
+msgstr ""
+
+#: build/admin-app.js:18
+msgid "Clear filters"
+msgstr ""
+
+#. translators: %s: board name.
+#: build/admin-app.js:18
+#, js-format
+msgid "%s is empty"
+msgstr ""
+
+#: build/admin-app.js:18
+msgid "Posts that match this board’s filters show up here. Add one to get started."
+msgstr ""
+
+#: build/admin-app.js:18
+msgid "Add the first post"
+msgstr ""
+
+#: build/admin-app.js:18
+msgid "Press Enter to open this post. Use the left and right arrow keys to move it to the previous or next stage."
+msgstr ""
+
+#: build/admin-app.js:18
+msgid "Tab to a card, then ← → to move it between stages. Enter opens it."
+msgstr ""
+
+#. translators: %s: date.
+#: build/admin-app.js:20
+#, js-format
+msgid "Scheduled for %s"
+msgstr ""
+
+#. translators: 1: date, 2: reason.
+#: build/admin-app.js:21
+#, js-format
+msgid "Date set for %1$s · not scheduled: %2$s"
+msgstr ""
+
+#. translators: %s: date.
+#: build/admin-app.js:23
+#: build/admin-app.js:54
+#, js-format
+msgid "Date set for %s"
+msgstr ""
+
+#. translators: 1: post title, 2: date.
+#: build/admin-app.js:25
+#, js-format
+msgid "Dropped %1$s on %2$s"
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "To set a date with the keyboard, open the post and use its Due field."
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "Previous month"
+msgstr ""
+
+#: build/admin-app.js:25
+#: build/admin-app.js:50
+msgid "Today"
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "Next month"
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "This month has more posts than the calendar shows. Search or filter by person to see the rest."
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "Unscheduled"
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "Drag a post onto a day to set its publish date."
+msgstr ""
+
+#: build/admin-app.js:25
+#: build/admin-app.js:34
+msgid "Nobody"
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "Editors"
+msgstr ""
+
+#: build/admin-app.js:25
+msgid "Everyone"
+msgstr ""
+
+#. translators: %s: WordPress post status.
+#: build/admin-app.js:26
+#, js-format
+msgid "WP: %s"
+msgstr ""
+
+#: build/admin-app.js:26
+msgid "Can’t skip"
+msgstr ""
+
+#. translators: %s: first name.
+#: build/admin-app.js:27
+#, js-format
+msgid "Reviewer: %s"
+msgstr ""
+
+#. translators: %d: limit.
+#: build/admin-app.js:28
+#, js-format
+msgid "Limit %d"
+msgstr ""
+
+#. translators: %s: audience, lowercase.
+#: build/admin-app.js:29
+#, js-format
+msgid "Notify %s"
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/admin-app.js:30
+#, js-format
+msgid "Reorder %s. Press Space to pick up, arrow keys to move, Space to drop."
+msgstr ""
+
+#: build/admin-app.js:30
+msgid "Drag to reorder"
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/admin-app.js:31
+#, js-format
+msgid "Change colour of %s"
+msgstr ""
+
+#: build/admin-app.js:31
+msgid "Change colour"
+msgstr ""
+
+#: build/admin-app.js:31
+msgid "Stage name"
+msgstr ""
+
+#. translators: %d: posts.
+#: build/admin-app.js:31
+#, js-format
+msgid "%d post"
+msgid_plural "%d posts"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: stage name.
+#: build/admin-app.js:32
+#, js-format
+msgid "Rules for %s"
+msgstr ""
+
+#: build/admin-app.js:32
+msgid "Stage rules"
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/admin-app.js:33
+#, js-format
+msgid "Move %s left"
+msgstr ""
+
+#: build/admin-app.js:33
+msgid "Move left"
+msgstr ""
+
+#: build/admin-app.js:33
+msgid "Delete"
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/admin-app.js:34
+#, js-format
+msgid "Delete %s"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Delete stage"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "A workflow needs at least two stages"
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/admin-app.js:34
+#, js-format
+msgid "%s rules"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "WordPress status"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Saved on the post when it enters this stage."
+msgstr ""
+
+#: build/admin-app.js:34
+#: build/admin-app.js:52
+#: build/editor-plugin.js:1
+msgid "Reviewer"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Shown on the post and notified on entry."
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Notify on entry"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "WIP limit"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "No limit"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Column turns red when exceeded."
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "When full"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Warn only"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Block moves"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Block stops new posts entering a full stage."
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Can’t be skipped"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Posts must pass through this stage before moving further right."
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Needs approval to leave"
+msgstr ""
+
+#: build/admin-app.js:34
+msgid "Only Editors and Administrators can move posts out."
+msgstr ""
+
+#. translators: %s: workflow name.
+#: build/admin-app.js:35
+#, js-format
+msgid "Created the %s workflow"
+msgstr ""
+
+#: build/admin-app.js:35
+msgid "New workflow"
+msgstr ""
+
+#: build/admin-app.js:35
+msgid "Create workflow"
+msgstr ""
+
+#: build/admin-app.js:35
+msgid "Content type (singular)"
+msgstr ""
+
+#: build/admin-app.js:35
+msgid "e.g. Podcast"
+msgstr ""
+
+#. translators: %s: post type slug.
+#: build/admin-app.js:36
+#, js-format
+msgid "Registers a post type with the slug “%s”, its own board and its own menu item."
+msgstr ""
+
+#: build/admin-app.js:36
+msgid "Each workflow registers its own post type."
+msgstr ""
+
+#: build/admin-app.js:36
+msgid "Start from"
+msgstr ""
+
+#. translators: %s: workflow name.
+#: build/admin-app.js:37
+#, js-format
+msgid "Copy %s"
+msgstr ""
+
+#: build/admin-app.js:37
+#: build/admin-app.js:44
+msgid "Unsaved changes"
+msgstr ""
+
+#. translators: 1: plural post type label, 2: stage count.
+#: build/admin-app.js:37
+#, js-format
+msgid "%1$s · %2$d stage"
+msgid_plural "%1$s · %2$d stages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin-app.js:37
+msgid "Add workflow"
+msgstr ""
+
+#: build/admin-app.js:37
+msgid "Each post type has one workflow. Boards are saved views on top of a workflow, so one post can appear on several boards."
+msgstr ""
+
+#: build/admin-app.js:37
+msgid "Only Administrators can change workflows."
+msgstr ""
+
+#. translators: %s: workflow name.
+#: build/admin-app.js:37
+#, js-format
+msgid "%s stages"
+msgstr ""
+
+#: build/admin-app.js:37
+msgid "Columns on every board that uses this workflow, left to right. Open a stage to set its rules."
+msgstr ""
+
+#: build/admin-app.js:37
+msgid "New stage"
+msgstr ""
+
+#: build/admin-app.js:37
+msgid "Add stage"
+msgstr ""
+
+#. translators: %d: position.
+#: build/admin-app.js:39
+#, js-format
+msgid "Position %d"
+msgstr ""
+
+#. translators: 1: stage, 2: position.
+#: build/admin-app.js:40
+#, js-format
+msgid "Moved %1$s to position %2$d"
+msgstr ""
+
+#: build/admin-app.js:40
+msgid "Reorder cancelled"
+msgstr ""
+
+#. translators: 1: stage, 2: number of posts, 3: stage.
+#: build/admin-app.js:41
+#, js-format
+msgid "Deleted %1$s · %2$d post moved to %3$s"
+msgid_plural "Deleted %1$s · %2$d posts moved to %3$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin-app.js:42
+msgid "Undo"
+msgstr ""
+
+#. translators: %s: stage.
+#: build/admin-app.js:43
+#, js-format
+msgid "Restored %s"
+msgstr ""
+
+#. translators: %s: workflow name.
+#: build/admin-app.js:43
+#, js-format
+msgid "Boards using %s"
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Rules"
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Enforce approvals"
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Stages marked “Needs approval” lock posts until an Editor moves them on."
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Auto-schedule"
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Dropping a ready post on a calendar day schedules it, if every check passes."
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Morning digest"
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "One email a day with overdue posts, posts due today and unread notifications."
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Send at"
+msgstr ""
+
+#. translators: %s: workflow name.
+#: build/admin-app.js:43
+#, js-format
+msgid "%s checklist"
+msgstr ""
+
+#. translators: %s: singular post type label, lowercase.
+#: build/admin-app.js:43
+#, js-format
+msgid "Shown on every %s and in the editor sidebar."
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Checklist gate"
+msgstr ""
+
+#: build/admin-app.js:43
+msgid "Block stages with a Scheduled or Published status until every item is ticked."
+msgstr ""
+
+#. translators: %s: checklist item.
+#: build/admin-app.js:44
+#, js-format
+msgid "Remove %s"
+msgstr ""
+
+#: build/admin-app.js:44
+msgid "Add an item"
+msgstr ""
+
+#: build/admin-app.js:44
+msgid "Add"
+msgstr ""
+
+#: build/admin-app.js:44
+msgid "Unsaved workflow changes"
+msgstr ""
+
+#: build/admin-app.js:44
+msgid "Discard"
+msgstr ""
+
+#: build/admin-app.js:44
+msgid "Workflow saved"
+msgstr ""
+
+#: build/admin-app.js:44
+msgid "Search users"
+msgstr ""
+
+#: build/admin-app.js:44
+msgid "Search users…"
+msgstr ""
+
+#. translators: %s: user.
+#: build/admin-app.js:45
+#, js-format
+msgid "Include %s"
+msgstr ""
+
+#: build/admin-app.js:45
+msgid "No users found."
+msgstr ""
+
+#: build/admin-app.js:45
+msgid "Show more people"
+msgstr ""
+
+#. translators: %d: drafts.
+#: build/admin-app.js:46
+#, js-format
+msgid "%d draft"
+msgid_plural "%d drafts"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: pending posts.
+#: build/admin-app.js:47
+#, js-format
+msgid "%d pending review"
+msgid_plural "%d pending review"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: scheduled posts.
+#: build/admin-app.js:48
+#, js-format
+msgid "%d scheduled post"
+msgid_plural "%d scheduled posts"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: published posts.
+#: build/admin-app.js:49
+#, js-format
+msgid "%d published post"
+msgid_plural "%d published posts"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: list of counts.
+#: build/admin-app.js:50
+#, js-format
+msgid "%s will be placed on the board."
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "There are no posts to bring in yet."
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Your board is ready"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Welcome to Masthead"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Turn your posts into an editorial board. Three choices and your team is ready."
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Setup has already run. Running it again replaces the stages and checklist of the Posts workflow. Posts keep their status and move to the matching stage."
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Choose a workflow for posts"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Workflow for posts"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "RECOMMENDED"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Other content types"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Each gets its own workflow and board"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Already set up"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Who’s on the team"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Everyone with a role is included unless you turn them off"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Bring in existing posts"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Skip for now"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Mention someone"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Leave a note"
+msgstr ""
+
+#: build/admin-app.js:50
+msgid "Open in editor"
+msgstr ""
+
+#. translators: %s: user name.
+#: build/admin-app.js:51
+#, js-format
+msgid "%s is editing this post right now. Changes you make here may be overwritten when they save."
+msgstr ""
+
+#: build/admin-app.js:51
+msgid "Title"
+msgstr ""
+
+#. translators: %s: name.
+#: build/admin-app.js:52
+#, js-format
+msgid "Assigned to %s"
+msgstr ""
+
+#: build/admin-app.js:52
+msgid "reviewing now"
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/admin-app.js:53
+#, js-format
+msgid "at %s"
+msgstr ""
+
+#: build/admin-app.js:53
+#: build/editor-plugin.js:1
+msgid "No reviewer"
+msgstr ""
+
+#: build/admin-app.js:53
+#: build/editor-plugin.js:1
+msgid "Due"
+msgstr ""
+
+#: build/admin-app.js:54
+msgid "Due date cleared"
+msgstr ""
+
+#: build/admin-app.js:54
+msgid "Workflow"
+msgstr ""
+
+#: build/admin-app.js:54
+msgid "On boards"
+msgstr ""
+
+#: build/admin-app.js:54
+msgid "None"
+msgstr ""
+
+#: build/admin-app.js:54
+msgid "WordPress"
+msgstr ""
+
+#: build/admin-app.js:54
+#: build/editor-plugin.js:1
+msgid "Length"
+msgstr ""
+
+#. translators: %s: number of words.
+#: build/admin-app.js:55
+#: build/editor-plugin.js:2
+#, js-format
+msgid "%s word"
+msgid_plural "%s words"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: done, 2: total.
+#: build/admin-app.js:55
+#: build/editor-plugin.js:2
+#, js-format
+msgid "%1$d of %2$d"
+msgstr ""
+
+#: build/admin-app.js:55
+msgid "Leave a note… type @ to mention"
+msgstr ""
+
+#. translators: %s: names.
+#: build/admin-app.js:56
+#, js-format
+msgid "Note posted · %s notified"
+msgstr ""
+
+#: build/admin-app.js:56
+msgid "Activity"
+msgstr ""
+
+#: build/admin-bar.js:2
+msgid "You’re all caught up."
+msgstr ""
+
+#: build/admin-bar.js:2
+msgid "Unread"
+msgstr ""
+
+#: build/dashboard-widget.js:1
+msgid "Set up Masthead to see your pipeline."
+msgstr ""
+
+#. translators: %s: workflow.
+#: build/dashboard-widget.js:1
+#, js-format
+msgid "%s in progress"
+msgstr ""
+
+#. translators: %d: overdue posts shown before "+".
+#: build/dashboard-widget.js:2
+#, js-format
+msgid "%d+ overdue"
+msgstr ""
+
+#. translators: %d: overdue posts.
+#: build/dashboard-widget.js:3
+#, js-format
+msgid "%d overdue"
+msgid_plural "%d overdue"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/dashboard-widget.js:3
+msgid "Waiting on you"
+msgstr ""
+
+#: build/dashboard-widget.js:3
+msgid "Nothing waiting on you."
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/dashboard-widget.js:4
+#, js-format
+msgid "Waiting for your review · %s"
+msgstr ""
+
+#. translators: %s: date.
+#: build/dashboard-widget.js:5
+#, js-format
+msgid "Overdue · due %s"
+msgstr ""
+
+#. translators: 1: stage, 2: date.
+#: build/dashboard-widget.js:6
+#, js-format
+msgid "%1$s · due %2$s"
+msgstr ""
+
+#: build/dashboard-widget.js:6
+msgid "Publishing next"
+msgstr ""
+
+#: build/dashboard-widget.js:6
+msgid "Nothing scheduled."
+msgstr ""
+
+#: build/dashboard-widget.js:6
+msgid "Open board"
+msgstr ""
+
+#: build/editor-plugin.js:1
+msgid "Stages"
+msgstr ""
+
+#: build/editor-plugin.js:1
+msgid "CURRENT"
+msgstr ""
+
+#: build/editor-plugin.js:2
+msgid "No notes yet."
+msgstr ""
+
+#. translators: %d: number of notes.
+#: build/editor-plugin.js:3
+#, js-format
+msgid "View all %d notes"
+msgstr ""
+
+#: build/editor-plugin.js:3
+msgid "Add a note on the board"
+msgstr ""
+
+#: build/editor-plugin.js:3
+msgid "send"
+msgstr ""
+
+#: build/editor-plugin.js:3
+msgid "publish"
+msgstr ""
+
+#. translators: %s: publish or send.
+#: build/editor-plugin.js:4
+#, js-format
+msgid "Are you ready to %s?"
+msgstr ""
+
+#. translators: %s: workflow name.
+#: build/editor-plugin.js:4
+#, js-format
+msgid "Masthead checks this post against the %s workflow before it goes live."
+msgstr ""
+
+#: build/editor-plugin.js:4
+msgid "Checking…"
+msgstr ""
+
+#: build/editor-plugin.js:4
+msgid "Passed"
+msgstr ""
+
+#: build/editor-plugin.js:4
+msgid "Failed"
+msgstr ""
+
+#. translators: %s: stage name.
+#: build/editor-plugin.js:5
+#, js-format
+msgid "All checks pass. This post moves to %s."
+msgstr ""
+
+#: build/editor-plugin.js:5
+msgid "Publishing is locked until every check passes."
+msgstr ""
+
+#: build/editor-plugin.js:5
+msgid "Stage:"
+msgstr ""
+
+#: build/list-table.js:1
+msgid "Select at least one post first."
+msgstr ""

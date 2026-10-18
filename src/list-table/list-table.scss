@@ -1,0 +1,22 @@
+.column-masthead_stage {
+	width: 12%;
+}
+
+.masthead-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 2px 9px;
+	border-radius: 20px;
+	background: #f0f0f1;
+	color: #1e1e1e;
+	font-size: 12px;
+	font-weight: 600;
+	white-space: nowrap;
+
+	&__dot {
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+	}
+}

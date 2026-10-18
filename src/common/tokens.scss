@@ -1,0 +1,36 @@
+// Masthead design tokens.
+// The accent follows the admin colour scheme when available.
+$breakpoint-small: 600px;
+$breakpoint-medium: 782px;
+
+@mixin tokens {
+	--mh-ink: #1e1e1e;
+	--mh-ink-2: #50575e;
+	--mh-muted: #757575;
+	--mh-faint: #949494;
+	--mh-page: #f0f0f1;
+	--mh-card: #fff;
+	--mh-column: #e6e7e9;
+	--mh-column-over: #e3e8fc;
+	--mh-border: #e0e0e0;
+	--mh-border-2: #dcdcde;
+	--mh-divider: #f0f0f0;
+	--mh-accent: var(--wp-admin-theme-color, #3858e9);
+	--mh-accent-hover: var(--wp-admin-theme-color-darker-10, #2145e6);
+	--mh-accent-tint: #eef1fd;
+	--mh-error: #cc1818;
+	--mh-error-tint: #fcf0f1;
+	--mh-success: #16a34a;
+	--mh-warn: #b45309;
+	--mh-warn-tint: #fef3c7;
+	--mh-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04);
+	--mh-shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.08);
+	--mh-shadow-pop: 0 16px 40px rgba(0, 0, 0, 0.14);
+	--mh-shadow-drawer: -16px 0 48px rgba(0, 0, 0, 0.14);
+	--mh-font: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+}
+
+@mixin focus-ring {
+	outline: 2px solid var(--mh-accent);
+	outline-offset: 2px;
+}

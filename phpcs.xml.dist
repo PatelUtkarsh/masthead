@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<ruleset name="Masthead">
+	<description>Coding standards for Masthead.</description>
+
+	<file>./masthead.php</file>
+	<file>./uninstall.php</file>
+	<file>./includes</file>
+
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+	<arg name="colors"/>
+
+	<config name="testVersion" value="8.4-"/>
+	<config name="minimum_wp_version" value="7.0"/>
+
+	<rule ref="WordPress-Extra">
+		<!-- PSR-4 file names (Rules.php) instead of class-rules.php. -->
+		<exclude name="WordPress.Files.FileName"/>
+		<!-- Short array syntax. -->
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+		<!-- PHP 8 features used on purpose. -->
+		<exclude name="Universal.Operators.DisallowShortTernary"/>
+		<exclude name="Universal.Operators.DisallowStandalonePostIncrementDecrement"/>
+		<exclude name="WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase"/>
+	</rule>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="masthead"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="masthead"/>
+				<element value="Masthead"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="PHPCompatibilityWP"/>
+</ruleset>

@@ -1,0 +1,163 @@
+@use "../common/tokens" as *;
+@use "../common/ui";
+
+.mh-dash {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+
+	&__big {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 8px;
+	}
+
+	&__num {
+		font-size: 30px;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+	}
+
+	&__label {
+		color: var(--mh-ink-2);
+	}
+
+	&__overdue {
+		color: var(--mh-error);
+		font-weight: 500;
+	}
+
+	&__bar {
+		display: flex;
+		gap: 2px;
+		height: 10px;
+		border-radius: 5px;
+		overflow: hidden;
+		background: #f0f0f0;
+	}
+
+	&__legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px 16px;
+		margin: 0;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			margin: 0;
+			color: var(--mh-ink-2);
+			font-size: 12px;
+		}
+
+		b {
+			color: var(--mh-ink);
+			font-weight: 600;
+		}
+	}
+
+	&__lists {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 16px;
+		padding-top: 6px;
+	}
+
+	// Core widget ID; beats #dashboard-widgets h3.
+	// stylelint-disable-next-line selector-id-pattern
+	#masthead_pipeline &__heading,
+	&__heading {
+		margin: 0 0 6px;
+		padding: 0;
+		color: var(--mh-muted);
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+
+	&__items {
+		margin: 0;
+
+		li {
+			margin: 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 0 -8px;
+		padding: 8px;
+		border-radius: 6px;
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			background: #f6f7f7;
+			color: inherit;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		gap: 2px;
+		min-width: 0;
+	}
+
+	&__title {
+		font-weight: 500;
+		line-height: 1.35;
+	}
+
+	&__meta {
+		color: var(--mh-muted);
+		font-size: 12px;
+
+		&.is-bad {
+			color: var(--mh-error);
+		}
+	}
+
+	&__tile {
+		display: flex;
+		flex: none;
+		flex-direction: column;
+		align-items: center;
+		width: 40px;
+		padding: 3px 0;
+		border-radius: 6px;
+		background: #f3f0fd;
+		color: #7c3aed;
+
+		span {
+			font-size: 10px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		b {
+			font-size: 15px;
+			line-height: 1.1;
+		}
+	}
+
+	&__open {
+		display: inline-flex;
+		align-items: center;
+		align-self: flex-start;
+		gap: 4px;
+		color: var(--mh-accent);
+		font-weight: 500;
+		text-decoration: none;
+
+		svg {
+			fill: currentcolor;
+		}
+	}
+}

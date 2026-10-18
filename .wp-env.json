@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/wp-env.json",
+	"core": "WordPress/WordPress#7.0",
+	"phpVersion": "8.4",
+	"plugins": [ "." ],
+	"config": {
+		"WP_DEBUG": true,
+		"SCRIPT_DEBUG": true
+	},
+	"env": {
+		"tests": {
+			"config": {
+				"WP_DEBUG": false
+			}
+		}
+	}
+}
