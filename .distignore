@@ -24,3 +24,4 @@ package-lock.json
 phpcs.xml.dist
 phpunit.xml.dist
 webpack.config.js
+AGENTS.md

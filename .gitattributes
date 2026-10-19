@@ -16,3 +16,4 @@
 /phpcs.xml.dist     export-ignore
 /phpunit.xml.dist   export-ignore
 /webpack.config.js  export-ignore
+/AGENTS.md          export-ignore
