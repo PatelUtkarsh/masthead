@@ -71,7 +71,7 @@ final class Notifications {
 				$rows[] = '(%d, %d, %s)';
 				array_push( $values, $user_id, $event_id, $now );
 			}
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- placeholders are generated.
+			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- placeholders are generated.
 			$wpdb->query( $wpdb->prepare( 'INSERT INTO %i (user_id, event_id, created_at) VALUES ' . implode( ',', $rows ), self::table(), ...$values ) );
 			foreach ( $chunk as $user_id ) {
 				wp_cache_delete( 'unread_' . $user_id, 'masthead' );

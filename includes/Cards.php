@@ -253,12 +253,12 @@ final class Cards {
 	 *
 	 * @return array<string, int>
 	 */
-	public static function stage_counts( Workflow $wf, bool $cached = true ): array {
+	public static function stage_counts( Workflow $wf ): array {
 		return StageTaxonomy::counts( $wf );
 	}
 
-	public static function count_in_stage( Workflow $wf, string $stage, bool $cached = true ): int {
-		return self::stage_counts( $wf, $cached )[ $stage ] ?? 0;
+	public static function count_in_stage( Workflow $wf, string $stage ): int {
+		return self::stage_counts( $wf )[ $stage ] ?? 0;
 	}
 
 	public static function flush_counts(): void {

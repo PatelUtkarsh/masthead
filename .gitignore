@@ -7,3 +7,4 @@ artifacts/
 playwright-report/
 .phpunit.result.cache
 .DS_Store
+dist/

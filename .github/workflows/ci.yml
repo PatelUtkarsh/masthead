@@ -1,0 +1,119 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_call:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2, cs2pr
+          coverage: none
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: composer validate --strict
+      - run: composer install --no-interaction --no-progress
+      - name: PHP syntax
+        run: find masthead.php uninstall.php includes -name '*.php' -print0 | xargs -0 -n1 php -l > /dev/null
+      - name: PHPCS
+        run: vendor/bin/phpcs -q --report=checkstyle | cs2pr
+
+      - run: npm ci --no-audit --no-fund
+      - run: npm run lint:js
+      - run: npm run lint:css
+      - run: npm run build
+
+  phpunit:
+    name: PHPUnit (PHP ${{ matrix.php }}, WP ${{ matrix.wp }})
+    runs-on: ubuntu-latest
+    needs: lint
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - php: '8.4'
+            wp: '7.0'
+            core: WordPress/WordPress#7.0
+          - php: '8.4'
+            wp: latest
+            core: https://wordpress.org/latest.zip
+          - php: '8.5'
+            wp: latest
+            core: https://wordpress.org/latest.zip
+    env:
+      WP_ENV_PHP_VERSION: ${{ matrix.php }}
+      WP_ENV_CORE: ${{ matrix.core }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+          coverage: none
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: composer install --no-interaction --no-progress
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npx wp-env start
+      - name: Single site
+        run: npm run test:php
+      - name: Multisite
+        run: npx wp-env run tests-cli --env-cwd=wp-content/plugins/masthead env WP_MULTISITE=1 vendor/bin/phpunit
+
+  e2e:
+    name: Playwright
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+          coverage: none
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: composer install --no-interaction --no-progress
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npx wp-env start
+      - run: npm run test:e2e
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-artifacts
+          path: artifacts
+          retention-days: 7

@@ -155,17 +155,19 @@ final class Dashboard {
 		$item = static function ( WP_Post $post, ?string $reason = null ) use ( $wf ): array {
 			$stage = Sync::current_stage( $post, $wf );
 			return [
-				'id'       => $post->ID,
-				'title'    => html_entity_decode( get_the_title( $post ), ENT_QUOTES ),
-				'stage'    => $stage ? [
+				'id'         => $post->ID,
+				'title'      => html_entity_decode( get_the_title( $post ), ENT_QUOTES ),
+				'stage'      => $stage ? [
 					'name'  => $stage->name,
 					'color' => $stage->color,
 				] : null,
-				'due'      => Meta::due( $post->ID ) ?: null,
-				'date'     => get_post_time( 'Y-m-d H:i', false, $post ),
-				'reason'   => $reason,
-				'author'   => People::user( (int) $post->post_author ),
-				'edit_url' => get_edit_post_link( $post->ID, 'raw' ),
+				'due'        => Meta::due( $post->ID ) ?: null,
+				'date'       => get_post_time( 'Y-m-d H:i', false, $post ),
+				// Formatted on the server in the site timezone; the browser's timezone may differ.
+				'date_label' => wp_date( _x( 'l, M j · g:i a', 'publish date and time', 'masthead' ), (int) get_post_time( 'U', true, $post ) ),
+				'reason'     => $reason,
+				'author'     => People::user( (int) $post->post_author ),
+				'edit_url'   => get_edit_post_link( $post->ID, 'raw' ),
 			];
 		};
 

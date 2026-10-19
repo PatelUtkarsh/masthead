@@ -1,0 +1,19 @@
+# Keep Composer dist archives (GitHub zipballs of release tags) lean.
+# Release tags include build/; development files stay out of the archive.
+/.github            export-ignore
+/.distignore        export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/.nvmrc             export-ignore
+/.wp-env.json       export-ignore
+/bin                export-ignore
+/docs               export-ignore
+/src                export-ignore
+/tests              export-ignore
+/package.json       export-ignore
+/package-lock.json  export-ignore
+/composer.lock      export-ignore
+/phpcs.xml.dist     export-ignore
+/phpunit.xml.dist   export-ignore
+/webpack.config.js  export-ignore
+/AGENTS.md          export-ignore
