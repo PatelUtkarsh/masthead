@@ -125,7 +125,7 @@ final class Rules {
 		if ( $target->limit <= 0 || LimitMode::Block !== $target->limit_mode ) {
 			return null;
 		}
-		$n = Cards::count_in_stage( $wf, $target->id, false );
+		$n = Cards::count_in_stage( $wf, $target->id );
 		if ( $n < $target->limit ) {
 			return null;
 		}
