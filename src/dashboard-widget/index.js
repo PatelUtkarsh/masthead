@@ -173,16 +173,8 @@ function Widget( { data } ) {
 												{ n.title }
 											</span>
 											<span className="mh-dash__meta">
-												{ dateI18n(
-													'l, M j · g:i a',
-													new Date(
-														n.date.replace(
-															' ',
-															'T'
-														)
-													)
-												) }{ ' ' }
-												· { n.author?.name }
+												{ n.date_label } ·{ ' ' }
+												{ n.author?.name }
 											</span>
 										</span>
 									</a>

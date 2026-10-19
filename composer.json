@@ -1,10 +1,17 @@
 {
-	"name": "masthead/masthead",
+	"name": "patelutkarsh/masthead",
 	"description": "Kanban publishing workflows for wp-admin.",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
+	"homepage": "https://github.com/PatelUtkarsh/masthead",
+	"keywords": [ "wordpress", "plugin", "editorial", "workflow", "kanban" ],
+	"support": {
+		"issues": "https://github.com/PatelUtkarsh/masthead/issues",
+		"source": "https://github.com/PatelUtkarsh/masthead"
+	},
 	"require": {
-		"php": ">=8.4"
+		"php": ">=8.4",
+		"composer/installers": "^2.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^9.6",
@@ -22,7 +29,9 @@
 			"php": "8.4.0"
 		},
 		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true
+			"composer/installers": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"phpstan/extension-installer": true
 		}
 	},
 	"scripts": {

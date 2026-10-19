@@ -1,0 +1,26 @@
+# Files left out of the plugin zip. Paths are relative to the repo root.
+.git
+.github
+.gitattributes
+.gitignore
+.distignore
+.nvmrc
+.wp-env.json
+.phpunit.result.cache
+.DS_Store
+artifacts
+bin
+dist
+docs
+node_modules
+playwright-report
+src
+test-results
+tests
+vendor
+composer.lock
+package.json
+package-lock.json
+phpcs.xml.dist
+phpunit.xml.dist
+webpack.config.js
