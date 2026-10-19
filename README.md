@@ -36,14 +36,23 @@ Requires WordPress 7.0+ and PHP 8.4+.
 
 **Zip:** download `masthead-X.Y.Z.zip` from [Releases](https://github.com/PatelUtkarsh/masthead/releases) and upload it in **Plugins → Add New → Upload Plugin**.
 
-**Composer:** release tags include the built assets, so no build step is needed.
+**Composer:** the package is on [Packagist](https://packagist.org/packages/patelutkarsh/masthead). Release tags include the built assets, so no build step is needed.
 
 ```sh
-composer config repositories.masthead vcs https://github.com/PatelUtkarsh/masthead
 composer require patelutkarsh/masthead
 ```
 
-The package type is `wordpress-plugin`, so `composer/installers` places it in `wp-content/plugins/masthead` (or your `installer-paths`).
+The package type is `wordpress-plugin`, so `composer/installers` places it in `wp-content/plugins/masthead`. To use another folder, set `installer-paths` in your project's `composer.json`:
+
+```json
+{
+	"extra": {
+		"installer-paths": {
+			"web/app/plugins/{$name}/": [ "type:wordpress-plugin" ]
+		}
+	}
+}
+```
 
 ## Development
 
