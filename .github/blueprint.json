@@ -1,0 +1,40 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Masthead demo",
+		"description": "Latest Masthead release with sample users, posts, stages, due dates and notes.",
+		"author": "PatelUtkarsh",
+		"categories": [
+			"Content"
+		]
+	},
+	"landingPage": "/wp-admin/admin.php?page=masthead",
+	"preferredVersions": {
+		"php": "8.4",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "url",
+				"url": "https://github.com/PatelUtkarsh/masthead/releases/download/v1.0.0/masthead-1.0.0.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php\nrequire '/wordpress/wp-load.php';\n\nuse Masthead\\Setup;\nuse Masthead\\Workflows;\nuse Masthead\\StageTaxonomy;\nuse Masthead\\Meta;\nuse Masthead\\Notes;\nuse Masthead\\Cards;\n\nwp_set_current_user( 1 );\n\n$people = [\n\t'maya' => [ 'Maya Chen', 'editor' ],\n\t'leo'  => [ 'Leo Park', 'author' ],\n\t'sam'  => [ 'Sam Rivera', 'author' ],\n\t'ava'  => [ 'Ava Okafor', 'contributor' ],\n];\n$ids = [];\nforeach ( $people as $login => [ $name, $role ] ) {\n\t$ids[ $login ] = wp_insert_user(\n\t\t[\n\t\t\t'user_login'   => $login,\n\t\t\t'user_pass'    => 'password',\n\t\t\t'user_email'   => $login . '@example.com',\n\t\t\t'display_name' => $name,\n\t\t\t'first_name'   => explode( ' ', $name )[0],\n\t\t\t'role'         => $role,\n\t\t]\n\t);\n}\n\n$cats = [];\nforeach ( [ 'News', 'Features', 'Opinion', 'Guides' ] as $c ) {\n\t$t           = wp_insert_term( $c, 'category' );\n\t$cats[ $c ] = is_wp_error( $t ) ? 0 : (int) $t['term_id'];\n}\n\n$body = '<!-- wp:paragraph --><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p><!-- /wp:paragraph -->';\n\n// title, author, category, status, stage, due offset (days), date offset (days).\n$posts = [\n\t[ 'Ten cities rethinking public transit', 'leo', 'Features', 'draft', 'idea', 14, 0 ],\n\t[ 'What the new privacy law means for you', 'sam', 'News', 'draft', 'idea', 10, 0 ],\n\t[ 'A beginner guide to sourdough', 'ava', 'Guides', 'draft', 'idea', null, 0 ],\n\t[ 'Inside the race for cheaper batteries', 'leo', 'Features', 'draft', 'draft', 5, 0 ],\n\t[ 'Why remote work is here to stay', 'sam', 'Opinion', 'draft', 'draft', -2, 0 ],\n\t[ 'How to plan a weekend hiking trip', 'ava', 'Guides', 'draft', 'draft', 7, 0 ],\n\t[ 'City council approves new bike lanes', 'sam', 'News', 'pending', 'review', 2, 0 ],\n\t[ 'The quiet comeback of vinyl records', 'leo', 'Features', 'pending', 'review', 3, 0 ],\n\t[ 'Five budgeting apps compared', 'ava', 'Guides', 'draft', 'ready', 4, 0 ],\n\t[ 'Interview: the chef behind the night market', 'maya', 'Features', 'draft', 'ready', 6, 0 ],\n\t[ 'Election night: what to watch', 'maya', 'News', 'future', 'scheduled', null, 3 ],\n\t[ 'Our favourite reads this autumn', 'leo', 'Opinion', 'future', 'scheduled', null, 6 ],\n\t[ 'Local library launches tool lending', 'sam', 'News', 'publish', 'published', null, -1 ],\n\t[ 'A field guide to urban birds', 'ava', 'Guides', 'publish', 'published', null, -4 ],\n];\n\n$created = [];\nforeach ( $posts as [ $title, $who, $cat, $status, $stage, $due, $offset ] ) {\n\t$date      = gmdate( 'Y-m-d H:i:s', time() + $offset * DAY_IN_SECONDS );\n\t$id        = wp_insert_post(\n\t\t[\n\t\t\t'post_title'    => $title,\n\t\t\t'post_content'  => $body,\n\t\t\t'post_status'   => $status,\n\t\t\t'post_author'   => $ids[ $who ],\n\t\t\t'post_category' => [ $cats[ $cat ] ],\n\t\t\t'post_date'     => 'draft' === $status || 'pending' === $status ? '' : $date,\n\t\t]\n\t);\n\t$created[] = [ $id, $stage, $due ];\n}\n\nSetup::apply(\n\t[\n\t\t'template' => 'team',\n\t\t'pages'    => true,\n\t\t'import'   => true,\n\t\t'team'     => array_values( $ids ),\n\t]\n);\n\n$wf = Workflows::for_post_type( 'post' );\nforeach ( $created as [ $id, $stage, $due ] ) {\n\tStageTaxonomy::set( $id, $wf, $stage );\n\tif ( null !== $due ) {\n\t\tMeta::set_due( $id, gmdate( 'Y-m-d', time() + $due * DAY_IN_SECONDS ) );\n\t}\n}\nCards::flush_counts();\n\n$notes = [\n\t6 => 'Please check the quotes from the council meeting before this goes out.',\n\t7 => 'Love the angle. Can we add a photo from the record fair?',\n\t4 => 'Running a bit late on this one, new draft by Friday.',\n];\nforeach ( $notes as $i => $text ) {\n\t$post = get_post( $created[ $i ][0] );\n\tif ( $post ) {\n\t\tNotes::add( $post, $text );\n\t}\n}\n"
+		}
+	]
+}

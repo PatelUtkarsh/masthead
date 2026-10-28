@@ -6,6 +6,8 @@ Kanban publishing workflows for wp-admin. A card is a post, and every stage maps
 
 Requires WordPress 7.0+ and PHP 8.4+.
 
+**[Try it in WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/PatelUtkarsh/masthead/main/.github/blueprint.json)**: the latest release with sample users, posts, stages, due dates and notes. The blueprint is `.github/blueprint.json`.
+
 ![Editorial board](.github/screenshots/board.png)
 
 ## Features
@@ -88,7 +90,7 @@ npm run lint:css
 
 **Releases** keep `build/` out of `main` but in every release:
 
-1. Bump the version on `main` and merge it: `bin/bump-version.sh 1.2.0` updates the plugin header, the `VERSION` constant and `package.json`.
+1. Bump the version on `main` and merge it: `bin/bump-version.sh 1.2.0` updates the plugin header, the `VERSION` constant, `package.json` and the release zip URL in the Playground blueprint.
 2. Run **Actions → Release → Run workflow** on `main` with the version `1.2.0`.
 
 The workflow runs the full CI suite, checks every version string (`bin/check-version.sh`), and builds the plugin (`bin/package.sh`). It then makes a release commit on top of `main` that adds `build/`, tags it `v1.2.0` and pushes only the tag. `main` itself never changes. Finally it publishes a GitHub release with `masthead-1.2.0.zip`.

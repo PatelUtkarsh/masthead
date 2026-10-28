@@ -13,9 +13,10 @@ cd "$(dirname "$0")/.."
 header=$(sed -n 's/^ \* Version:[[:space:]]*\(.*\)$/\1/p' masthead.php)
 constant=$(sed -n "s/^const VERSION[[:space:]]*=[[:space:]]*'\(.*\)';$/\1/p" masthead.php)
 package=$(node -p "require('./package.json').version")
+blueprint=$(sed -n 's#.*/releases/download/v\([^/]*\)/masthead-.*\.zip".*#\1#p' .github/blueprint.json)
 
 status=0
-for pair in "plugin header:$header" "VERSION constant:$constant" "package.json:$package"; do
+for pair in "plugin header:$header" "VERSION constant:$constant" "package.json:$package" "blueprint zip:$blueprint"; do
 	name="${pair%%:*}"
 	value="${pair#*:}"
 	if [[ "$value" != "$version" ]]; then
